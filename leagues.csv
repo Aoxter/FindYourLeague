@@ -1,4 +1,4 @@
-league;country;clubs;goalsPerMatch;totalMarketValueInMln;avgMarketValueInMln;teamsInChampionsLeague;teamsInEuropaLeague;teamsInConferenceLeague;famousPlayers
+league;country;clubs;goalsPerMatch;avgMarketValueInMln;totalMarketValueInMln;teamsInChampionsLeague;teamsInEuropaLeague;teamsInConferenceLeague;famousPlayers
 Premier League;England;20;2.78;453.95;9080.0;4;2;1;35
 LaLiga;Spain;20;2.45;246.89;4940.0;4;2;1;21
 Serie A;Italy;20;3.05;245.69;4910.0;4;2;1;17
@@ -52,4 +52,4 @@ Gibraltar National League;Gibraltar;11;3.68;1.01;11.11;1;0;3;0
 Pepsi Max deild;Iceland;12;2.83;1.75;20.98;1;0;3;0
 1. CFL;Montenegro;10;2.46;2.69;26.90;1;0;3;0
 Primera Divisió;Andorra;8;2.80;1.38;11.05;1;0;2;0
-Camp. Sammarinese;San Marino;15;2.67;0.333;4.99;1;0;2;0
+Camp. Sammarinese;San Marino;15;2.67;0.33;4.99;1;0;2;0
