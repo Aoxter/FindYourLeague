@@ -1,6 +1,7 @@
 import numpy as np
 import skfuzzy as fuzz
 import matplotlib.pyplot as plt
+from read_data import get_leagues_data
 
 # https://pythonhosted.org/scikit-fuzzy/auto_examples/plot_tipping_problem.html
 
@@ -117,33 +118,33 @@ def activateFuzzyMembershipFunctions(values):
     clubs_mid_level = fuzz.interp_membership(unv_clubs, clubs_mid, values['clubs'])
     clubs_hig_level = fuzz.interp_membership(unv_clubs, clubs_hig, values['clubs'])
 
-    goals_low_level = fuzz.interp_membership(unv_goals, goals_low, values['goals'])
-    goals_mid_level = fuzz.interp_membership(unv_goals, goals_mid, values['goals'])
-    goals_hig_level = fuzz.interp_membership(unv_goals, goals_hig, values['goals'])
+    goals_low_level = fuzz.interp_membership(unv_goals, goals_low, values['goalsPerMatch'])
+    goals_mid_level = fuzz.interp_membership(unv_goals, goals_mid, values['goalsPerMatch'])
+    goals_hig_level = fuzz.interp_membership(unv_goals, goals_hig, values['goalsPerMatch'])
 
-    avgValue_low_level = fuzz.interp_membership(unv_avgValue, avgValue_low, values['avgValue'])
-    avgValue_mid_level = fuzz.interp_membership(unv_avgValue, avgValue_mid, values['avgValue'])
-    avgValue_hig_level = fuzz.interp_membership(unv_avgValue, avgValue_hig, values['avgValue'])
+    avgValue_low_level = fuzz.interp_membership(unv_avgValue, avgValue_low, values['avgMarketValueInMln'])
+    avgValue_mid_level = fuzz.interp_membership(unv_avgValue, avgValue_mid, values['avgMarketValueInMln'])
+    avgValue_hig_level = fuzz.interp_membership(unv_avgValue, avgValue_hig, values['avgMarketValueInMln'])
 
-    totValue_low_level = fuzz.interp_membership(unv_totValue, totValue_low, values['totValue'])
-    totValue_mid_level = fuzz.interp_membership(unv_totValue, totValue_mid, values['totValue'])
-    totValue_hig_level = fuzz.interp_membership(unv_totValue, totValue_hig, values['totValue'])
+    totValue_low_level = fuzz.interp_membership(unv_totValue, totValue_low, values['totalMarketValueInMln'])
+    totValue_mid_level = fuzz.interp_membership(unv_totValue, totValue_mid, values['totalMarketValueInMln'])
+    totValue_hig_level = fuzz.interp_membership(unv_totValue, totValue_hig, values['totalMarketValueInMln'])
 
-    players_low_level = fuzz.interp_membership(unv_players, players_low, values['players'])
-    players_mid_level = fuzz.interp_membership(unv_players, players_mid, values['players'])
-    players_hig_level = fuzz.interp_membership(unv_players, players_hig, values['players'])
+    players_low_level = fuzz.interp_membership(unv_players, players_low, values['famousPlayers'])
+    players_mid_level = fuzz.interp_membership(unv_players, players_mid, values['famousPlayers'])
+    players_hig_level = fuzz.interp_membership(unv_players, players_hig, values['famousPlayers'])
 
-    teamsChL_low_level = fuzz.interp_membership(unv_teamsChL, teamsChL_low, values['teamsChL'])
-    teamsChL_mid_level = fuzz.interp_membership(unv_teamsChL, teamsChL_mid, values['teamsChL'])
-    teamsChL_hig_level = fuzz.interp_membership(unv_teamsChL, teamsChL_hig, values['teamsChL'])
+    teamsChL_low_level = fuzz.interp_membership(unv_teamsChL, teamsChL_low, values['teamsInChampionsLeague'])
+    teamsChL_mid_level = fuzz.interp_membership(unv_teamsChL, teamsChL_mid, values['teamsInChampionsLeague'])
+    teamsChL_hig_level = fuzz.interp_membership(unv_teamsChL, teamsChL_hig, values['teamsInChampionsLeague'])
 
-    teamsEuL_low_level = fuzz.interp_membership(unv_teamsEuL, teamsEuL_low, values['teamsEuL'])
-    teamsEuL_mid_level = fuzz.interp_membership(unv_teamsEuL, teamsEuL_mid, values['teamsEuL'])
-    teamsEuL_hig_level = fuzz.interp_membership(unv_teamsEuL, teamsEuL_hig, values['teamsEuL'])
+    teamsEuL_low_level = fuzz.interp_membership(unv_teamsEuL, teamsEuL_low, values['teamsInEuropaLeague'])
+    teamsEuL_mid_level = fuzz.interp_membership(unv_teamsEuL, teamsEuL_mid, values['teamsInEuropaLeague'])
+    teamsEuL_hig_level = fuzz.interp_membership(unv_teamsEuL, teamsEuL_hig, values['teamsInEuropaLeague'])
 
-    teamsCfL_low_level = fuzz.interp_membership(unv_teamsCfL, teamsCfL_low, values['teamsCfL'])
-    teamsCfL_mid_level = fuzz.interp_membership(unv_teamsCfL, teamsCfL_mid, values['teamsCfL'])
-    teamsCfL_hig_level = fuzz.interp_membership(unv_teamsCfL, teamsCfL_hig, values['teamsCfL'])
+    teamsCfL_low_level = fuzz.interp_membership(unv_teamsCfL, teamsCfL_low, values['teamsInConferenceLeague'])
+    teamsCfL_mid_level = fuzz.interp_membership(unv_teamsCfL, teamsCfL_mid, values['teamsInConferenceLeague'])
+    teamsCfL_hig_level = fuzz.interp_membership(unv_teamsCfL, teamsCfL_hig, values['teamsInConferenceLeague'])
 
 
 def defineRules():
@@ -205,19 +206,11 @@ def defineRules():
 
 
 if __name__ == "__main__":
-    values = {}
-    values['clubs'] = 18
-    values['goals'] = 2.76
-    values['avgValue'] = 14.16
-    values['totValue'] = 254.90
-    values['players'] = 0
-    values['teamsChL'] = 1
-    values['teamsEuL'] = 0
-    values['teamsCfL'] = 3
-
     initFuzzyMembershipFunctions()
-    activateFuzzyMembershipFunctions(values)
-    result = defineRules()
-    print(f"Ekstraklasa score is: {result}")
+    leagues_data = get_leagues_data()
+    for league in leagues_data:
+        activateFuzzyMembershipFunctions(league)
+        result = defineRules()
+        print(f"{league['leagueName']} score is: {result}")
 
     #plt.show()

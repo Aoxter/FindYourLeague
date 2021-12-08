@@ -1,4 +1,4 @@
-league;country;clubs;goalsPerMatch;avgMarketValueInMln;totalMarketValueInMln;teamsInChampionsLeague;teamsInEuropaLeague;teamsInConferenceLeague;famousPlayers
+leagueName;country;clubs;goalsPerMatch;avgMarketValueInMln;totalMarketValueInMln;teamsInChampionsLeague;teamsInEuropaLeague;teamsInConferenceLeague;famousPlayers
 Premier League;England;20;2.78;453.95;9080.0;4;2;1;35
 LaLiga;Spain;20;2.45;246.89;4940.0;4;2;1;21
 Serie A;Italy;20;3.05;245.69;4910.0;4;2;1;17
