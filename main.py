@@ -207,8 +207,25 @@ def defineRules():
 
 if __name__ == "__main__":
     initFuzzyMembershipFunctions()
-    leagues_data = get_leagues_data()
-    for league in leagues_data:
+    data_source = None
+    while not(data_source == '1' or data_source == '2'):
+        data_source = input('Wpisz 1 by wczytać dane z pliku lub 2 by wpisać dane z konsoli:\n')
+    if data_source == '1':
+        leagues_data = get_leagues_data('leagues.csv')
+        for league in leagues_data:
+            activateFuzzyMembershipFunctions(league)
+            result = defineRules()
+            print(f"{league['leagueName']} score is: {result}")
+    else:
+        league = {'leagueName': input('Podaj nazwę ligi:\n'), 'country': input('Podaj kraj ligi:\n'),
+                  'clubs': input('Podaj liczbę klubów grających w lidze:\n'),
+                  'goalsPerMatch': input('Podaj średnią liczbę goli na mecz:\n'),
+                  'avgMarketValueInMln': input('Podaj średnią wartośc klubu w lidze (w milionach):\n'),
+                  'totalMarketValueInMln': input('Podaj całkowitą wartość ligi (w milionach):\n'),
+                  'teamsInChampionsLeague': input('Podaj liczbę klubów grających w Lidze Mistrzów:\n'),
+                  'teamsInEuropaLeague': input('Podaj liczbę klubów grających w Lidze Europy:\n'),
+                  'teamsInConferenceLeague': input('Podaj liczbę klubów grających w Lidze Konferencji:\n'),
+                  'famousPlayers': input('Podaj liczbę sławnych piłkarzy:\n')}
         activateFuzzyMembershipFunctions(league)
         result = defineRules()
         print(f"{league['leagueName']} score is: {result}")
