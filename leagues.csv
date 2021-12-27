@@ -1,55 +1,55 @@
-leagueName;country;clubs;goalsPerMatch;avgMarketValueInMln;totalMarketValueInMln;teamsInChampionsLeague;teamsInEuropaLeague;teamsInConferenceLeague;famousPlayers
-Premier League;England;20;2.78;453.95;9080.0;4;2;1;35
-LaLiga;Spain;20;2.45;246.89;4940.0;4;2;1;21
-Serie A;Italy;20;3.05;245.69;4910.0;4;2;1;17
-Bundesliga;Germany;18;3.04;233.67;4210.0;4;2;1;15
-Ligue 1;France;20;2.83;185.93;3720.0;3;2;1;10
-Liga Bwin;Portugal;18;2.66;64.83;1170.0;3;1;2;0
-Eredivisie;Netherlands;18;2.97;51.78;932.08;2;1;2;0
-Bundesliga;Austria;12;2.95;27.67;332.0;2;1;2;1
-Premiership;Scotland;12;2.52;22.98;275.78;2;1;2;0
-Premier Liga;Russia;16;2.69;60.99;975.8;2;1;2;0
-Premier Liga;Ukraine;16;2.67;28.07;449.18;2;1;2;0
-Super liga Srbije;Serbia;16;2.74;11.60;185.58;1;0;3;0
-Jupiler Pro League;Belgium;18;3.08;46.38;834.9;2;1;2;0
-Super League;Switzerland;10;3.30;28.59;285.93;1;0;3;0
-Protathlima Cyta;Cyprus;12;2.23;11.00;131.95;1;1;2;0
-1.HNL;Croatia;10;2.95;25.51;255.11;1;0;3;0
-Fortuna Liga;Czech Republic;16;3.08;15.60;249.63;2;1;2;0
-Super Lig;Turkey;20;2.63;46.27;925.45;2;1;2;0
-Super League 1;Greece;14;2.60;25.19;352.68;1;0;3;0
-Superligaen;Denmark;12;2.74;20.14;241.68;2;1;2;0
-Eliteserien;Norway;16;3.04;8.46;135.43;1;0;3;0
-Ligat ha'Al;Israel;14;2.38;8.88;124.38;1;0;3;0
-Allsvenskan;Sweden;16;2.63;11.33;181.29;1;0;3;0
-efbet Liga;Bulgaria;14;2.41;8.50;118.94;1;0;3;0
-Premyer Liqa;Azerbaijan;8;2.69;6.36;50.91;1;0;3;0
-Liga 1;Romania;16;2.12;12.31;196.89;1;0;3;0
-Ekstraklasa;Poland;18;2.76;14.16;254.90;1;0;3;0
-NB I.;Hungary;12;3.19;11.11;133.38;1;0;3;0
-Fortuna Liga;Slovakia;12;2.74;6.75;81.04;1;0;3;0
-Premier Liga;Kazakhstan;14;2.57;7.92;110.85;1;0;3;0
-Prva Liga;Slovenia;10;2.45;5.41;54.12;1;0;3;0
-Vysheyshaya Liga;Belarus;16;2.71;4.92;78.73;1;0;3;0
-Divizia Nationala;Moldova;8;3.26;4.96;39.67;1;0;3;0
-A Lyga;Lithuania;10;2.74;2.69;26.88;1;0;3;0
-Premijer Liga;Bosnia-Herzegovina;12;2.27;3.78;45.41;1;0;3;0
-Veikkausliiga;Finland;12;2.35;3.25;38.99;1;0;3;0
-BGL Ligue;Luxembourg;16;3.38;1.69;27.06;1;0;3;0
-Virsliga;Latvia;9;3.02;3.09;27.80;1;0;3;0
-BKT Superliga e Kosovës;Kosovo;10;2.11;2.34;22.43;1;0;2;0
-Premier Division;Republic of Ireland;10;2.54;1.35;13.46;1;0;3;0
-Premiership;Northern Ireland;12;2.85;1.96;23.50;1;0;3;0
-Kategoria Superiore;Albania;10;2.52;4.15;41.50;1;0;3;0
-Bardzragujn khumb;Armenia;10;2.45;4.08;40.79;1;0;3;0
-Betri-deildin;Faroe Islands;10;3.63;1.13;11.29;1;0;2;0
-Premium Liiga;Estonia;10;3.29;2.48;24.81;1;0;2;0
-Premier League;Malta;12;2.87;2.97;35.65;1;0;3;0
-Crystalbet Erovnuli Liga;Georgia;10;2.53;3.70;37.00;1;0;3;0
-Prva liga;North Macedonia;12;2.41;2.71;32.57;1;0;3;0
-Cymru Premier;Wales;12;2.78;1.13;13.57;1;0;3;0
-Gibraltar National League;Gibraltar;11;3.68;1.01;11.11;1;0;3;0
-Pepsi Max deild;Iceland;12;2.83;1.75;20.98;1;0;3;0
-1. CFL;Montenegro;10;2.46;2.69;26.90;1;0;3;0
-Primera Divisió;Andorra;8;2.80;1.38;11.05;1;0;2;0
-Camp. Sammarinese;San Marino;15;2.67;0.33;4.99;1;0;2;0
+leagueName;country;clubs;goalsPerMatch;avgMarketValueInMln;teamsInChampionsLeague;teamsInEuropaLeague;teamsInConferenceLeague;famousPlayers
+Premier League;England;20;2.78;453.95;4;2;1;35
+LaLiga;Spain;20;2.45;246.89;4;2;1;21
+Serie A;Italy;20;3.05;245.69;4;2;1;17
+Bundesliga;Germany;18;3.04;233.67;4;2;1;15
+Ligue 1;France;20;2.83;185.93;3;2;1;10
+Liga Bwin;Portugal;18;2.66;64.83;3;1;2;0
+Eredivisie;Netherlands;18;2.97;51.78;2;1;2;0
+Bundesliga;Austria;12;2.95;27.67;2;1;2;1
+Premiership;Scotland;12;2.52;22.98;2;1;2;0
+Premier Liga;Russia;16;2.69;60.99;2;1;2;0
+Premier Liga;Ukraine;16;2.67;28.07;2;1;2;0
+Super liga Srbije;Serbia;16;2.74;11.60;1;0;3;0
+Jupiler Pro League;Belgium;18;3.08;46.38;2;1;2;0
+Super League;Switzerland;10;3.30;28.59;1;0;3;0
+Protathlima Cyta;Cyprus;12;2.23;11.00;1;1;2;0
+1.HNL;Croatia;10;2.95;25.51;1;0;3;0
+Fortuna Liga;Czech Republic;16;3.08;15.60;2;1;2;0
+Super Lig;Turkey;20;2.63;46.27;2;1;2;0
+Super League 1;Greece;14;2.60;25.19;1;0;3;0
+Superligaen;Denmark;12;2.74;20.14;2;1;2;0
+Eliteserien;Norway;16;3.04;8.46;1;0;3;0
+Ligat ha'Al;Israel;14;2.38;8.88;1;0;3;0
+Allsvenskan;Sweden;16;2.63;11.33;1;0;3;0
+efbet Liga;Bulgaria;14;2.41;8.50;1;0;3;0
+Premyer Liqa;Azerbaijan;8;2.69;6.36;1;0;3;0
+Liga 1;Romania;16;2.12;12.31;1;0;3;0
+Ekstraklasa;Poland;18;2.76;14.16;1;0;3;0
+NB I.;Hungary;12;3.19;11.11;1;0;3;0
+Fortuna Liga;Slovakia;12;2.74;6.75;1;0;3;0
+Premier Liga;Kazakhstan;14;2.57;7.92;1;0;3;0
+Prva Liga;Slovenia;10;2.45;5.41;1;0;3;0
+Vysheyshaya Liga;Belarus;16;2.71;4.92;1;0;3;0
+Divizia Nationala;Moldova;8;3.26;4.96;1;0;3;0
+A Lyga;Lithuania;10;2.74;2.69;1;0;3;0
+Premijer Liga;Bosnia-Herzegovina;12;2.27;3.78;1;0;3;0
+Veikkausliiga;Finland;12;2.35;3.25;1;0;3;0
+BGL Ligue;Luxembourg;16;3.38;1.69;1;0;3;0
+Virsliga;Latvia;9;3.02;3.09;1;0;3;0
+BKT Superliga e Kosovës;Kosovo;10;2.11;2.34;1;0;2;0
+Premier Division;Republic of Ireland;10;2.54;1.35;1;0;3;0
+Premiership;Northern Ireland;12;2.85;1.96;1;0;3;0
+Kategoria Superiore;Albania;10;2.52;4.15;1;0;3;0
+Bardzragujn khumb;Armenia;10;2.45;4.08;1;0;3;0
+Betri-deildin;Faroe Islands;10;3.63;1.13;1;0;2;0
+Premium Liiga;Estonia;10;3.29;2.48;1;0;2;0
+Premier League;Malta;12;2.87;2.97;1;0;3;0
+Crystalbet Erovnuli Liga;Georgia;10;2.53;3.70;1;0;3;0
+Prva liga;North Macedonia;12;2.41;2.71;1;0;3;0
+Cymru Premier;Wales;12;2.78;1.13;1;0;3;0
+Gibraltar National League;Gibraltar;11;3.68;1.01;1;0;3;0
+Pepsi Max deild;Iceland;12;2.83;1.75;1;0;3;0
+1. CFL;Montenegro;10;2.46;2.69;1;0;3;0
+Primera Divisió;Andorra;8;2.80;1.38;1;0;2;0
+Camp. Sammarinese;San Marino;15;2.67;0.33;1;0;2;0
