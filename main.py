@@ -316,11 +316,11 @@ class LeagueController:
         self.score['best'] = fuzz.trapmf(self.score.universe, [75, 85, 100, 100])
 
         # FuzzyRules
-        self.rule1 = ctrl.Rule(self.clubs['some'] | self.clubs['few'] | self.goals['few'] | self.avgValue['mpoor'] | self.avgValue['poor'] | self.avgValue['vpoor'] | self.players['none'] | self.teamsChL['min'] | self.teamsEuL['min'] | self.teamsCfL['max'] | self.teamsCfL['mid'], self.score['tragic'])
-        self.rule2 = ctrl.Rule(self.clubs['several'] | self.clubs['some'] | self.clubs['few'] | self.goals['moderate'] | self.goals['few'] | self.avgValue['moderate'] | self.avgValue['mpoor'] | self.avgValue['poor'] | self.players['few'] | self.players['none'] | self.teamsChL['min'] | self.teamsEuL['min'] | self.teamsCfL['max'] | self.teamsCfL['mid'], self.score['bad'])
-        self.rule3 = ctrl.Rule(self.clubs['several'] | self.clubs['some'] | self.goals['moderate'] | self.avgValue['mrich'] | self.avgValue['moderate'] | self.avgValue['mpoor'] | self.players['moderate'] | self.players['few'] | self.teamsChL['mid'] | self.teamsChL['min'] | self.teamsEuL['mid'] | self.teamsEuL['min'] | self.teamsCfL['max'] | self.teamsCfL['mid'], self.score['moderate'])
-        self.rule4 = ctrl.Rule(self.clubs['many'] | self.clubs['several'] | self.goals['many'] | self.goals['moderate'] | self.avgValue['vrich'] | self.avgValue['rich'] | self.avgValue['mrich'] | self.players['many'] | self.players['moderate'] | self.teamsChL['mid'] | self.teamsEuL['mid'] | self.teamsCfL['mid'], self.score['good'])
-        self.rule5 = ctrl.Rule(self.clubs['many'] | self.goals['many'] | self.avgValue['vrich'] | self.players['many'] | self.teamsChL['max'] | self.teamsEuL['max'] | self.teamsCfL['min'], self.score['best'])
+        self.rule1 = ctrl.Rule((self.goals['few'] | self.avgValue['vpoor'] | self.avgValue['poor']) & self.players['none'] & self.teamsCfL['max'] | self.teamsChL['min'], self.score['tragic'])
+        self.rule2 = ctrl.Rule((self.goals['few'] | self.goals['moderate']) & (self.avgValue['mpoor'] | self.avgValue['poor']) & (self.players['none'] | self.players['few']) & self.teamsCfL['max'] | self.teamsEuL['mid'], self.score['bad'])
+        self.rule3 = ctrl.Rule((self.avgValue['mpoor'] | self.avgValue['moderate'] | self.avgValue['mrich']) & (self.players['few'] | self.players['moderate']) & (self.teamsEuL['mid'] | self.teamsEuL['max']) & (self.teamsChL['min'] | self.teamsChL['mid']), self.score['moderate'])
+        self.rule4 = ctrl.Rule((self.clubs['many'] | self.clubs['several']) & (self.goals['many'] | self.goals['moderate']) & (self.avgValue['mrich'] | self.avgValue['rich']) & (self.players['many'] | self.players['moderate']) | self.teamsChL['mid'] | self.teamsEuL['mid'] | self.teamsCfL['mid'], self.score['good'])
+        self.rule5 = ctrl.Rule((self.clubs['many'] | self.goals['many'] | self.avgValue['rich'] | self.avgValue['vrich']) & (self.players['many']) & (self.teamsChL['max']), self.score['best'])
 
         self.league_ctrl = ctrl.ControlSystem([self.rule1, self.rule2, self.rule3, self.rule4, self.rule5])
         self.league_system = ctrl.ControlSystemSimulation(self.league_ctrl)
