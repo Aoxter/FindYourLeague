@@ -326,13 +326,13 @@ class LeagueController:
         self.league_system = ctrl.ControlSystemSimulation(self.league_ctrl)
 
     def getScore(self, values):
-        self.league_system.input['clubs'] = values['clubs']
-        self.league_system.input['goals'] = values['goalsPerMatch']
-        self.league_system.input['avgValue'] = values['avgMarketValueInMln']
-        self.league_system.input['players'] = values['famousPlayers']
-        self.league_system.input['teamsChL'] = values['teamsInChampionsLeague']
-        self.league_system.input['teamsEuL'] = values['teamsInEuropaLeague']
-        self.league_system.input['teamsCfL'] = values['teamsInConferenceLeague']
+        self.league_system.input['clubs'] = int(values['clubs'])
+        self.league_system.input['goals'] = float(values['goalsPerMatch'])
+        self.league_system.input['avgValue'] = float(values['avgMarketValueInMln'])
+        self.league_system.input['players'] = int(values['famousPlayers'])
+        self.league_system.input['teamsChL'] = int(values['teamsInChampionsLeague'])
+        self.league_system.input['teamsEuL'] = int(values['teamsInEuropaLeague'])
+        self.league_system.input['teamsCfL'] = int(values['teamsInConferenceLeague'])
 
         self.league_system.compute()
 
@@ -421,17 +421,18 @@ if __name__ == "__main__":
     view_plot = input('Wpisz 1 jeżeli chcesz obejrzeć wykresy funkcji i reguł dla ostatnio sprawdzanej ligi lub dowolny klawisz żeby kontynuować:\n')
     if view_plot == '1':
         while (function_rule_result != '0'):
-            function_rule_result = input('Wybierz rodzaj wykresu:\n1 - wykresy funkcji przynależności\n2 - wykresy reguł\n3 - wykres wyniku kontrolera\n0 - skończ wizualizację\n')
+            #function_rule_result = input('Wybierz rodzaj wykresu:\n1 - wykresy funkcji przynależności\n2 - wykresy reguł\n3 - wykres wyniku kontrolera\n0 - skończ wizualizację\n')
+            function_rule_result = input('Wybierz rodzaj wykresu:\n1 - wykresy funkcji przynależności\n2 - wykres wyniku kontrolera\n0 - skończ wizualizację\n')
             if function_rule_result == "1":
                 while (function_id != '8'):
                     function_id = input('Wybierz funkcje przynależności:\n0 - funkcje punktów atrakcyjności ligi\n1 - funkcje klubów w lidze\n2 - funkcje średniej ilości golów\n3 - funkcje średniej wartości rynkowej\n4 - funkcje ilości słynnych zawodników\n5 - funkcje drużyn w lidze mistrzów\n6 - funkcję drużyn w lidze europy\n7 - funkcję drużyn w lidze konfederacji\n8 - powrót do poprzedniego menu\n')
                     if function_id == "0" or function_id == "1" or function_id == "2" or function_id == "3" or function_id == "4" or function_id == "5" or function_id == "6" or function_id == "7":
                         controller.displayMembershipFunctionPlot(int(function_id))
+            # elif function_rule_result == "2":
+            #     while (rule_id != '6'):
+            #         rule_id = input('Wybierz regułę:\n1 - reguła dla tragicznych lig\n2 - reguła dla słabych lig\n3 - reguła dla przeciętnych lig\n4 - reguła dla dobrych lig\n5 - reguła dla najlepszych lig\n6 - powrót do poprzedniego menu\n')
+            #         if rule_id == "1" or rule_id == "2" or rule_id == "3" or rule_id == "4" or rule_id == "5":
+            #             controller.displayRulePlot(int(rule_id))
             elif function_rule_result == "2":
-                while (rule_id != '6'):
-                    rule_id = input('Wybierz regułę:\n1 - reguła dla tragicznych lig\n2 - reguła dla słabych lig\n3 - reguła dla przeciętnych lig\n4 - reguła dla dobrych lig\n5 - reguła dla najlepszych lig\n6 - powrót do poprzedniego menu\n')
-                    if rule_id == "1" or rule_id == "2" or rule_id == "3" or rule_id == "4" or rule_id == "5":
-                        controller.displayRulePlot(int(rule_id))
-            elif function_rule_result == "3":
                 controller.displayControllerResultPlot()
     #plt.show()
